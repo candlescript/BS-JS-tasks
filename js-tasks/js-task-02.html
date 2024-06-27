@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>String manipulator</h3>
+    <h5>Provide a string to manipulate:</h5>
+        <input type="text" id="str">
+        <button type="submit" onclick="func()">Submit</button>
+    </div>
+    <script>
+        function func(){
+            var string1=document.getElementById("str").value;
+            function alpha(str) {
+                var arr = str.split("");
+                res = arr.sort().join(""); 
+                return res; 
+            }
+         alert("The manipulated string is "+alpha(string1));
+        }
+    </script>
+</body>
+</html>

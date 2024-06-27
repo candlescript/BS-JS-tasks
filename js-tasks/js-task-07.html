@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.train{
+    height:200px;
+    width:400px;
+    
+      transform: translateY(-50%);
+      animation: move-train 5s linear infinite;
+}
+img{
+    height: 100%;
+    width: 100%;
+}
+
+    @keyframes move-train {
+      from {
+        transform: translateX(0px);
+      }
+      to {
+        transform: translateX(100vw);
+      }
+    }
+    button {
+            background-color: red;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: grey;
+        }
+  
+</style>
+<body>
+    <div class="train" style="animation-play-state: paused;"><img src="train.png" alt="train"  ></div>
+    <h2 class="text-center">Click the following buttons to handle animations</h2>
+    <button id="start-button">Start</button><button id="stop-button">Stop</button>
+    <script>
+        
+    const train = document.querySelector('.train');
+    const startButton = document.getElementById('start-button');
+    const stopButton = document.getElementById('stop-button');
+
+    let isAnimationRunning = false;
+
+    startButton.addEventListener('click', () => {
+      if (!isAnimationRunning) {
+        train.style.animationPlayState = 'running';
+        isAnimationRunning = true;
+      }
+    });
+
+    stopButton.addEventListener('click', () => {
+      if (isAnimationRunning) {
+        train.style.animationPlayState = 'paused';
+        isAnimationRunning = false;
+      }
+    });
+  
+    </script>
+</body>
+</html>

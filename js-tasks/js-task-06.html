@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container{
+            background-color: rgb(236, 229, 229);
+            padding: 15px;
+            width:40%;
+        }
+        .i,select,button{
+            width:100%;
+            display: inline-block;
+        }
+        ion-icon{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-3 ">
+        <h4 class="text-center"><i>Instagram</i></h4>
+        <form action="" class="px-5">
+            <ion-icon name="person" class="px-2 pt-2">nm</ion-icon>
+            <input type="text" name="name" class="i form-control" placeholder="Username" required><br>
+            <ion-icon name="key"  class="px-2 pt-2">mn</ion-icon>
+            <input type="password" name="pass" class="i form-control" placeholder="Password" required>
+            
+            <button type="submit" class="btn mt-3 text-light bg-primary"> Login </button>
+            <input type="checkbox" >Remember me
+            <a href="#">Forgot Password?</a>
+        </form>
+        
+    </div>
+    <p class="text-center">Dont have an account! <a href="#" class="text-primary">Sign up here.</a></p>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        table{
+            background-color: rgba(222, 215, 215, 0.581);
+            width:40% !important;
+            margin: auto !important;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="" class="needs-validation was-validated" novalidate>
+            <table class="table mt-5  text-end">
+                <tr>
+                    <th>First Name</th>
+                    <td><ion-icon name="person" class="px-2 pt-2"></ion-icon><input placeholder="First name" required><div class="invalid-feedback">
+                        Please enter a valid First Name!
+                    </div></td>
+                </tr>
+                <tr>
+                    <th >Last Name</th>
+                    <td><ion-icon name="person" class="px-2 pt-2"></ion-icon><input placeholder="Last name" required></td>
+                </tr>
+            
+                <tr>
+                    <th>Email</th>
+                    <td><ion-icon name="mail" class="px-2 pt-2"></ion-icon><input placeholder="E-mail Address" required></td>
+                </tr>
+                
+                <tr>
+                    <th>Phone #</th>
+                    <td><ion-icon name="call" class="px-2 pt-2"></ion-icon><input placeholder="(845)555-1212" required></td>
+                </tr>
+                <tr>
+                    <th>Address</th>
+                    <td><ion-icon name="home" class="px-2 pt-2"></ion-icon><input placeholder="Address" required></td>
+                </tr>
+                <tr>
+                    <th>City</th>
+                    <td><ion-icon name="home" class="px-2 pt-2"></ion-icon><input placeholder="City" required></td>
+                </tr>
+                <tr>
+                    <th>State</th>
+                    <td><ion-icon name="arrow-dropdown" class="px-2 pt-2"></ion-icon><select> <option value="">Please select your state</option></td>
+                </tr>
+                <tr>
+                    <th>Do you have a hosting?</th>
+                    <td>
+                        <input type="radio" ><option style="display: inline;">Yes</option><br>
+                        <input type="radio" ><option style="display: inline;">No</option>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Product Description</th>
+                    <td><ion-icon name="clipboard"class="px-2 pt-2"></ion-icon><input style="height:50px;" placeholder="Product Description"></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td class="text-start"><button type="submit" class="btn bg-warning text-light">Send</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script>
+    
+
+    (() => {
+        'use strict'
+
+
+        const forms = document.querySelectorAll('.needs-validation')
+
+        Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+            }, false)
+        })
+    })()
+
+</script>
+</body>
+</html>
